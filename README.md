@@ -97,37 +97,3 @@ docker-compose down
 ### Backend
 
 The API endpoints can be accessed for direct integration or testing. The primary endpoint for compliance checking will be documented in the `main.py` file.
-
-## Pushing Docker Images to Docker Hub
-
-If you want to push your Docker images to Docker Hub, follow these steps:
-
-1. Log into your Docker Hub account:
-
-    ```bash
-    docker login
-    ```
-
-2. Tag your images appropriately:
-
-    ```bash
-    docker tag <image_id_or_name> yourusername/compliance-app:latest
-    ```
-
-3. Push the image to Docker Hub:
-
-    ```bash
-    docker push yourusername/compliance-app:latest
-    ```
-
-## Contributing
-
-Contributions are welcome! If you have suggestions for improvements, please open an issue or submit a pull request.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Contact
-
-For any inquiries or questions, please contact [your_email@example.com].
