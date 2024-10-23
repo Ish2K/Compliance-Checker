@@ -16,6 +16,7 @@ Before you begin, ensure you have met the following requirements:
 - Python 3.8 or higher
 - Docker and Docker Compose installed
 - A Docker Hub account (optional for pushing images)
+- An OpenAI API key (sign up at [OpenAI](https://platform.openai.com/signup) if you don't have one)
 
 ## Project Structure
 
@@ -43,10 +44,18 @@ Clone the repository to your local machine:
 
 ```bash
 git clone https://github.com/Ish2K/Compliance-Checker.git
-cd https://github.com/Ish2K/Compliance-Checker.git
+cd Compliance-Checker
 ```
 
-### 2. Build the Docker Images
+### 2. Set Up Environment Variables
+
+Create a `.env` file in the `webapp` directory and add your OpenAI API key:
+
+```env
+OPENAI_API_KEY=your_openai_api_key_here
+```
+
+### 3. Build the Docker Images
 
 To build the Docker images, run the following command:
 
@@ -54,7 +63,7 @@ To build the Docker images, run the following command:
 docker-compose build
 ```
 
-### 3. Start the Services
+### 4. Start the Services
 
 You can start the application and its dependencies (including Celery and Flower) with Docker Compose:
 
@@ -62,7 +71,7 @@ You can start the application and its dependencies (including Celery and Flower)
 docker-compose up
 ```
 
-### 4. Access the Application
+### 5. Access the Application
 
 Once the services are running, you can access the application in your web browser at:
 
@@ -70,7 +79,7 @@ Once the services are running, you can access the application in your web browse
 http://localhost:8000
 ```
 
-### 5. Using the Flower Dashboard
+### 6. Using the Flower Dashboard
 
 To monitor your Celery tasks, access the Flower dashboard at:
 
@@ -78,7 +87,7 @@ To monitor your Celery tasks, access the Flower dashboard at:
 http://localhost:5555
 ```
 
-### 6. Stopping the Services
+### 7. Stopping the Services
 
 To stop the running services, use:
 
