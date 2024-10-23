@@ -1,0 +1,16 @@
+openai
+uvicorn
+fastapi
+celery
+redis
+sentry-sdk
+bs4
+flower
+pandas
+html2text
+langchain
+python-dotenv
+jinja2
+tiktoken
+httpx
+python-multipart
